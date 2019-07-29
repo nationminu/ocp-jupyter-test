@@ -49,7 +49,7 @@ rm -rf /tmp/src
 
 mkdir -p /opt/app-root/scripts
 
-# ln -s /opt/app-root/bin/wait-for-database /opt/app-root/scripts/wait-for-database
+ln -s /opt/app-root/bin/wait-for-database /opt/app-root/scripts/wait-for-database
 
 # Ensure passwd/group file intercept happens for any shell environment.
 
