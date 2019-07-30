@@ -171,6 +171,28 @@ c.JupyterHub.authenticator_class = 'dummyauthenticator.DummyAuthenticator'
 c.DummyAuthenticator.password = "force1234"
 c.Authenticator.whitelist = {"test1", "test2", "test3", "test4", "test5"}
 
+## PVC
+c.KubeSpawner.user_storage_pvc_ensure = True
+
+c.KubeSpawner.pvc_name_template = '%s-nb-{username}' % c.KubeSpawner.hub_connect_ip
+c.KubeSpawner.user_storage_capacity = '1Gi'
+
+c.KubeSpawner.volumes = [
+    {
+        'name': 'data',
+        'persistentVolumeClaim': {
+            'claimName': c.KubeSpawner.pvc_name_template
+        }
+    }
+]
+
+c.KubeSpawner.volume_mounts = [
+    {
+        'name': 'data',
+        'mountPath': '/opt/app-root/src'
+    }
+]
+
 c.JupyterHub.spawner_class = 'kubespawner.KubeSpawner'
 
 c.KubeSpawner.image_spec = resolve_image_name(
