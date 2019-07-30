@@ -169,7 +169,7 @@ else:
 # c.JupyterHub.authenticator_class = 'tmpauthenticator.TmpAuthenticator'
 c.JupyterHub.authenticator_class = 'dummyauthenticator.DummyAuthenticator'
 c.DummyAuthenticator.password = "force1234"
-c.Authenticator.whitelist = {"test1", "test2"}
+c.Authenticator.whitelist = {"test1", "test2", "test3", "test4", "test5"}
 
 c.JupyterHub.spawner_class = 'kubespawner.KubeSpawner'
 
