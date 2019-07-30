@@ -166,7 +166,10 @@ if os.environ.get('JUPYTERHUB_DATABASE_PASSWORD'):
 else:
     c.JupyterHub.db_url = '/opt/app-root/data/database.sqlite'
 
-c.JupyterHub.authenticator_class = 'tmpauthenticator.TmpAuthenticator'
+# c.JupyterHub.authenticator_class = 'tmpauthenticator.TmpAuthenticator'
+c.JupyterHub.authenticator_class = 'dummyauthenticator.DummyAuthenticator'
+c.DummyAuthenticator.password = "force1234"
+c.Authenticator.whitelist = {"test1", "test2"}
 
 c.JupyterHub.spawner_class = 'kubespawner.KubeSpawner'
 
