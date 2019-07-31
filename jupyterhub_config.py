@@ -180,7 +180,7 @@ c.KubeSpawner.user_storage_capacity = '1Gi'
 
 c.KubeSpawner.volumes = [
     {
-        'name': 'data',
+        'name': c.KubeSpawner.pvc_name_template,
         'persistentVolumeClaim': {
             'claimName': c.KubeSpawner.pvc_name_template
         }
@@ -189,7 +189,7 @@ c.KubeSpawner.volumes = [
 
 c.KubeSpawner.volume_mounts = [
     {
-        'name': 'data',
+        'name':  c.KubeSpawner.pvc_name_template,
         'mountPath': '/opt/app-root/src'
     }
 ]
