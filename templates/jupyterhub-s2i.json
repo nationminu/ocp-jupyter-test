@@ -33,12 +33,12 @@
         },
         {
             "name": "GIT_REPOSITORY_URL",
-            "value": "https://github.com/nationminu/ocp-jupyter-test.git",
+            "value": "https://github.com/jupyter-on-openshift/jupyterhub-quickstart.git",
             "required": true
         },
         {
             "name": "GIT_REFERENCE",
-            "value": "origin",
+            "value": "3.1.0",
             "required": true
         },
         {
