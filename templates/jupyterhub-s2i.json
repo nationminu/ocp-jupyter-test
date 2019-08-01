@@ -23,7 +23,7 @@
         },
         {
             "name": "S2I_IMAGE",
-            "value": "jupyterhub-build:latest",
+            "value": "jupyterhub:latest",
             "required": true
         },
         {
@@ -33,12 +33,12 @@
         },
         {
             "name": "GIT_REPOSITORY_URL",
-            "value": "https://github.com/jupyter-on-openshift/jupyterhub-quickstart.git",
+            "value": "https://github.com/nationminu/ocp-jupyter-test.git",
             "required": true
         },
         {
             "name": "GIT_REFERENCE",
-            "value": "3.1.0",
+            "value": "origin",
             "required": true
         },
         {
